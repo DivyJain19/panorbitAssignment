@@ -36,3 +36,20 @@
     transform: rotate(360deg);
   }
 }
+.hide {
+  opacity: 0;
+}
+.show {
+  opacity: 1;
+}
+.box {
+  position: absolute;
+  height: 17rem;
+  width: 15rem;
+  background-color: white;
+  border-radius: 1.5rem;
+  /* top: 1rem; */
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  align-items: center;
+  text-align: center;
+}

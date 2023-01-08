@@ -1,0 +1,54 @@
+.profileData {
+  width: 400px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  color: #555;
+}
+
+.profileImage {
+  height: 13rem;
+  width: 13rem;
+  margin: 2rem;
+}
+.profileImage img {
+  object-fit: cover;
+  border-radius: 50%;
+  height: 100%;
+  width: 100%;
+}
+.profileMap {
+  flex: 1;
+  margin: 2rem;
+
+  font-size: 1.2rem;
+  color: #555;
+  border-left: 1px solid #ddd;
+}
+
+.dataItem {
+  padding: 0.5rem 0;
+  margin: 0 1rem;
+  display: flex;
+  width: calc(100% - 2rem);
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+.border {
+  margin: 1rem 0;
+  border-top: 1px solid #ddd;
+}
+.label {
+  color: #999;
+  width: 35%;
+  text-align: right;
+}
+.value {
+  padding-left: 0.5rem;
+  width: 65%;
+  font-weight: 600;
+}

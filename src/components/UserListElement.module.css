@@ -1,0 +1,15 @@
+.listItem {
+  display: flex;
+  padding: 1.2em 1em;
+  align-items: center;
+  height: 1rem;
+  border-bottom: 1px solid #dfdfde;
+  margin: 0 1em;
+  text-decoration: none;
+}
+.img {
+  width: 2em;
+  height: 2em;
+  border-radius: 50%;
+  margin: 0 1rem 0 0;
+}
