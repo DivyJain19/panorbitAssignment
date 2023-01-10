@@ -14,6 +14,7 @@ const UserListElement = (props) => {
       style={{ textDecoration: "none", color: "black" }}
       to={`user/${props.userData.id}/profile`}
       onClick={selectUserHandler}
+      className={props.redirect ? "" : "disable"}
     >
       <div className={classes.listItem}>
         <img className={classes.img} src={props.userImg} alt="" />

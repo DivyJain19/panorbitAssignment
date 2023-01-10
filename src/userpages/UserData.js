@@ -3,9 +3,11 @@ import classes from "./UserData.module.css";
 import { useParams } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { fetchUserData } from "../store/user-actions";
+import ChatBox from "../components/ChatBox";
 const UserData = () => {
   const params = useParams();
   const [userData, setUserdata] = useState({});
+  const [chatData, setChatData] = useState([]);
   const userDataList = useSelector((state) => {
     return state.user.userData;
   });
@@ -17,10 +19,11 @@ const UserData = () => {
       dispatch(fetchUserData());
     }
     setUserdata(userDataList[params.userId - 1]);
+    setChatData(userDataList);
   }, [userDataList, dispatch, params.userId]);
   if (userData) {
     return (
-      <div style={{ display: "flex" }}>
+      <div style={{ display: "flex", width: "90%" }}>
         <div className={classes.profileData}>
           <div className={classes.profileImage}>
             <img src={userData.profilepicture} alt="profile pic" />
@@ -99,8 +102,8 @@ const UserData = () => {
               </div>
             </div>
           </div>
-          {/* <MapComponent /> */}
         </div>
+        <ChatBox userData={chatData} />
       </div>
     );
   } else {

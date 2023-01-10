@@ -17,6 +17,7 @@ const HomePage = () => {
                 key={item.id}
                 userName={item.name}
                 userImg={item.profilepicture}
+                redirect={true}
               />
             ))}
         </div>

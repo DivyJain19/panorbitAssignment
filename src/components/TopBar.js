@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import classes from "./TopBar.module.css";
 import { useLocation, useParams, useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
-
+import UserListElement from "./UserListElement";
 const TopBar = () => {
   const navigate = useNavigate();
   const [user, setUser] = useState({});
@@ -10,17 +10,15 @@ const TopBar = () => {
   const location = useLocation();
   const page = location.pathname.split("/").pop();
   const params = useParams();
-  const userTemp = useSelector(
-    (state) => state.user.userData[params.userId - 1]
-  );
+  const userTemp = useSelector((state) => state.user.userData);
 
   const boxHandler = () => {
     setShowbox((prevState) => !prevState);
   };
 
   useEffect(() => {
-    setUser(userTemp);
-  }, [userTemp]);
+    setUser(userTemp[params.userId - 1]);
+  }, [userTemp, params]);
   if (user) {
     return (
       <div className={classes.bar}>
@@ -34,6 +32,20 @@ const TopBar = () => {
             <img className={classes.boxImg} src={user.profilepicture} alt="" />
             <p>{user.name}</p>
             <p className={classes.light}>{user.username}</p>
+
+            <div className={classes.userList}>
+              {userTemp &&
+                userTemp.map((item) => (
+                  <UserListElement
+                    userData={item}
+                    key={item.id}
+                    userName={item.name}
+                    userImg={item.profilepicture}
+                    redirect={false}
+                  />
+                ))}
+            </div>
+
             <button
               className={classes.btn}
               onClick={() => {

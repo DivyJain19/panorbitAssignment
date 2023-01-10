@@ -1,3 +1,11 @@
 .pro {
   display: flex;
+  height: 100vh;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  position: relative;
+}
+.content {
+  width: 100%;
 }

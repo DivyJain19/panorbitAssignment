@@ -6,12 +6,13 @@ import UserData from "../userpages/UserData";
 import classes from "./ProfilePage.module.css";
 import TopBar from "../components/TopBar";
 import CommingSoon from "../components/CommingSoon";
+import ChatBox from "../components/ChatBox";
 const ProfilePage = () => {
   // const userName = useSelector((state) => state);
   return (
     <div className={classes.pro}>
       <NavigationBar />
-      <div style={{ width: "70%" }}>
+      <div className={classes.content}>
         <TopBar />
         <Routes>
           <Route path="/profile" element={<UserData />} />

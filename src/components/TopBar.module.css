@@ -1,6 +1,6 @@
 .bar {
-  width: 100%;
-  margin: 2.5rem 0;
+  width: 90%;
+  margin: 1.5rem 0 0.5rem 0;
   display: flex;
   justify-content: space-between;
   padding-bottom: 1rem;
@@ -50,4 +50,14 @@
   color: white;
   font-weight: 900;
   cursor: pointer;
+  margin-top: 1.2rem;
+}
+.userList {
+  box-sizing: border-box;
+  width: 100%;
+  /* position: absolute; */
+  height: 32%;
+  /* max-height: 100%; */
+  overflow: auto;
+  /* overflow-y: hidden; */
 }

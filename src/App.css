@@ -44,12 +44,15 @@
 }
 .box {
   position: absolute;
-  height: 17rem;
-  width: 15rem;
+  height: 23rem;
+  width: 18rem;
   background-color: white;
   border-radius: 1.5rem;
   /* top: 1rem; */
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
   align-items: center;
   text-align: center;
+}
+.disable {
+  pointer-events: none;
 }
